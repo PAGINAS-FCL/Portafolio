@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ffffff, #3f3f3f);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 280px; 
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #000000;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #464646;
+    padding-bottom: 5px;
+}
+
+
+p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #333;
+}
+
+
+a {
+    color: #00234b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #002a4d;
+}
+
+.skills ul {
+    list-style: none;
+}
+
+.skills li {
+    padding-left: 20px;
+    position: relative;
+}
+
+.skills li:before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #000000;
+}
+
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+section:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.links a:hover {
+    background-color: #777777;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    section {
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
+
+/* celulares*/
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    section {
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .links a {
+        font-size: 14px;
+        padding: 0.4rem 0.8rem;
+    }
+}
+

@@ -1,0 +1,220 @@
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ffffff, #3f3f3f);
+    color: #333;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #ffffff, #3f3f3f);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #000000;
+}
+
+.container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile img {
+    width: 150px;
+    height: 180px;
+    border: 5px solid #000000;
+    transition: transform 0.3s;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+.profile h2 {
+    margin: 1rem 0 0.5rem;
+    font-size: 28px;
+}
+
+.profile p {
+    margin: 0;
+    font-size: 16px;
+    color: #000000;
+}
+
+.profile h2 a {
+    text-decoration: none;
+    color: #000000;
+    transition: text-decoration 0.3s;
+}
+
+.profile h2 a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+
+.links {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.links a:hover {
+    background-color: #777777;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.about {
+    max-width: 800px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    font-size: 70px;
+    color: #000000;
+    transition: transform 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #000000;
+}
+
+.social-icons .icon {
+    font-size: 30px;
+    color: #000000;
+    transition: transform 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+/*adaptacion*/
+
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .profile img {
+        width: 120px;
+        height: 140px;
+    }
+
+    .profile h2 {
+        font-size: 24px;
+    }
+
+    .profile p {
+        font-size: 14px;
+    }
+
+    .links a {
+        font-size: 14px;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .social-icons {
+        gap: 2rem;
+    }
+}
+
+/*medida de celulares*/
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 120px;
+    }
+
+    .profile h2 {
+        font-size: 20px;
+    }
+
+    .profile p {
+        font-size: 12px;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .links a {
+        font-size: 14px;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .social-icons a {
+        font-size: 50px;
+    }
+
+    .about {
+        padding: 0 10px;
+        font-size: 14px;
+    }
+}
